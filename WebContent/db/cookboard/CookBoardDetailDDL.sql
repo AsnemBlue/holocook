@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+--                       COOKBOARDDETAIL                          --
+----------------------------------------------------------------------
+DROP TABLE COOKBOARDDETAIL;
+DROP SEQUENCE COOKBOARDDETAIL_SEQ;
+CREATE SEQUENCE COOKBOARDDETAIL_SEQ MAXVALUE 9999 NOCACHE NOCYCLE;
+CREATE TABLE COOKBOARDDETAIL(
+    CBDNO NUMBER(8),
+    CBDORDER NUMBER(2) NOT NULL,
+    CBDIMAGE VARCHAR2(100),
+    CBDCONTENT VARCHAR2(1000),
+    CBDCOUNT NUMBER(1) NOT NULL,
+    CBNO,
+    PRIMARY KEY(CBDNO),
+    FOREIGN KEY(CBNO) REFERENCES COOKBOARD
+);
+COMMIT;

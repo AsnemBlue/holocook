@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap');
+*{	padding:0; 
+	margin:0 auto; 
+	text-align:center;
+	outline: none;
+	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif; }
+a{text-decoration: none; color:black;}
+li{list-style:none;}
+caption {font-size: 18px; padding:10px;}
+
+/* 주황색계열: 연->#fcc6a2  #f89b6c  #f37321 ->진  테두리용 #d65412;	
+네이비: #2b3f6b	연네이비: #7b8ea9 */
+
+/*table */
+table {width:90%; background-color: white;}
+table tr { height:40px; }
+td,  th {text-align: center; padding:5px; }
+/* */
+.left{text-align: left;}
+.paging {text-align: center;}
+.whole_wrap{width: 1000px; margin:0 auto;}
+
+#content_wrap{
+	width:1000px;
+	margin-bottom: 10px;
+	
+}
+#container{
+	width:460px;
+	margin:10px auto;
+}
+.btn_normal{
+	height:46px;
+box-sizing: border-box;
+overflow: visible;
+text-transform: none;
+-webkit-appearance: button;
+cursor: pointer;
+color: #fff;
+background-color: #f37321;
+border: 1px solid #e05d09;
+padding: 10px 30px;
+font-size: 18px;
+border-radius: 3px;
+margin: 0 4px;
+margin-top: 20px;
+}
+.btn_arrow, .btn_page, .btn_page_now, .btn_admin{
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	box-sizing: border-box;
+	text-align: center;
+	border: 1px solid #e6e6e6;
+	font-size: 20px;
+	line-height: 38px;
+	color: #f37321;
+	border-color: #f37321;
+}
+.btn_admin{width:auto;}
+.btn_page_now{
+	background-color: #f37321;
+	color: white;
+}

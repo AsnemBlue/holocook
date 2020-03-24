@@ -1,0 +1,29 @@
+@charset "UTF-8";
+body{
+	background: #f5f6f7;
+	
+}
+header{
+	box-sizing: border-box;
+    height: 170px;
+    width: 1000px;
+	margin:0 auto;
+}
+header img{
+	height: 150px;
+	margin: 5px;
+}
+
+.input_login{
+	width:100%;
+	text-align: left;
+}
+#form_login>div, #form_login>.input_login{
+font-size: 12px;
+position: relative;
+height: 29px;
+margin: 0 0 14px;
+padding: 10px 35px 10px 15px;
+border: solid 1px #dadada;
+background: #fff;	
+}

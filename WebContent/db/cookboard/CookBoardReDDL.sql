@@ -1,0 +1,16 @@
+----------------------------------------------------------------------
+--                          COOKBOARDRE                             --
+----------------------------------------------------------------------
+DROP TABLE COOKBOARDRE;
+DROP SEQUENCE COOKBOARDRE_SEQ;
+CREATE SEQUENCE COOKBOARDRE_SEQ MAXVALUE 9999 NOCACHE NOCYCLE;
+CREATE TABLE COOKBOARDRE(
+    CBRNO NUMBER(4),
+    CBRCONTENT VARCHAR2(1000) NOT NULL,
+    CBRIP VARCHAR2(100) NOT NULL,
+    CBRRDATE DATE DEFAULT SYSDATE,
+    CBNO NOT NULL,
+    MID NOT NULL,
+    FOREIGN KEY(CBNO) REFERENCES COOKBOARD,
+    FOREIGN KEY(MID) REFERENCES MEMBER
+);

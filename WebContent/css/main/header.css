@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*
+header .lnb ul li .subMenu {display:none;}
+header .lnb ul li:hover .subMenu {display: block; margin: 10px 0 0 0;}
+*/
+
+header #searchlogin{
+	
+    height: 50px; 
+    line-height:50px;
+    margin:0 auto;
+    background-color: #f37321;
+    width:100%;
+}
+header #searchlogin #searchWrap, header nav{
+	width:1000px; margin:0 auto;
+	position:relative;
+}
+header #searchlogin #searchWrap #search{
+	width:310px;
+	float:left;
+	height:50px;
+	position:relative;
+}
+header #searchlogin #searchWrap #search .text_search{
+	float:left;
+	height:30px; line-height:30px;
+	width:250px;
+	margin: 10px 0;
+	text-align: left;
+	font-size: 1.1em;
+	padding: 0 30px 0 20px;
+}
+header #searchlogin #searchWrap #search .btn_search{
+	position:absolute;
+	right:15px; top:20px;
+	background: url(/holocook/img/header/search.png) no-repeat;
+	height:20px; width:20px;
+	border:0; outline: none;
+}
+header #searchlogin #searchWrap #search .btn_search:hover{cursor: pointer;}
+/*로그아웃시 로그인 버튼 스타일 */
+#btn_login_view {
+	float:right;
+	width: 53px;
+    height: 23px;
+    line-height: 23px;
+    margin: 8px 21px 8px 1px;
+    padding: 5px;
+    border:1px solid #d65412;
+    border-radius: 5px;
+}
+#btn_login_view a{
+	color:white;
+}
+
+#searchWrap #login_button_wrap{
+	overflow:hidden;
+	height: 50px;
+}
+header #searchlogin #searchWrap button{
+	float:right;
+	margin: 0 20px;
+	background-color: #f37321;
+	outline: none; border:0;
+	padding:10px 5px 0px 5px;
+	overflow:hidden;
+	
+}
+header #searchlogin #searchWrap button:hover{cursor: pointer;}
+header #searchlogin #searchWrap button img{
+	background-color: darkgray;
+	height:35px;
+	width:auto;
+	border-radius: 20px;
+}
+header #searchlogin #searchWrap .toggle_menu{
+    width: 200px;
+    left: 400px;
+	margin-top: -1px;
+	z-index: 10;
+    position: relative;
+	border:1px solid #ecaf7f;
+	display:none;
+	height: auto;
+}
+header #searchlogin #searchWrap .toggle_menu li{
+	width:200px; 
+}
+
+header nav #menu img{
+	height:35px;
+	width:35px;
+	float: left;
+}
+header nav #lineMenu{
+	width:1000px;
+	height:35px;
+	line-height: 35px;
+}
+header nav #lineMenu > li{
+	float:left;
+	width:25%;
+	height:35px;
+	line-height: 35px;
+	display: table-cell;
+	position: relative;
+}
+header nav #lineMenu li:hover > a, header nav .lineMenu_list li:hover > a, .toggle_menu li:hover > a{
+	display: inline;
+	cursor: pointer;
+	font-weight:500;
+	color:#f37321;
+	box-sizing: border-box;
+	border-bottom: 1px solid #f37321;
+}
+
