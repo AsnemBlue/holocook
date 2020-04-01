@@ -107,7 +107,6 @@ public class MemberDao {
 			pstmt.setString(4, dto.getmName()		);
 			pstmt.setString(5, dto.getmTel() 		);
 			pstmt.setString(6, dto.getmEmail() 		);
-			pstmt.setString(7, dto.getmPhoto() 		);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());

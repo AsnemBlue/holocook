@@ -11,7 +11,7 @@
 <link href="${conPath }/css/style.css" rel="stylesheet">
 <link href="${conPath }/css/member/login_view.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="${conPath}/js/login_view.js"></script>
+<script src="${conPath}/js/member/login_view.js"></script>
 </head>
 <body>
 	<c:if test="${not empty msg_join }">

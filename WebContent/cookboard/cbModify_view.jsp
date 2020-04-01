@@ -51,11 +51,15 @@ $(document).ready(function(){
 		<form action="${conPath }/cbModify.do?cbNo=${param.cbNo }" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="cbNo" value="${param.cbNo }">
 			<input type="hidden" name="mId" value="${member.mId }">
+			<input type="hidden" name="origin_cbImage" value="${top_content.cbImage }">
 			<input type="text" name="cbdCount" id="cbdCount" value="${param.cbdCount}">
 			<table>
 				<caption>레시피 수정</caption>
 				<tr>
 					<th>레시피 제목</th><th><input type="text" name="cbTitle" required="required" value="${top_content.cbTitle }"></th>
+				</tr>
+				<tr>
+					<th><img src="${conPath }/cookboard_img/${top_content.cbImage }" class="img_food"></th>
 				</tr>
 				<tr>
 					<th>대표 이미지</th><th><input type="file" name="cbImage" >${top_content.cbImage }</th>
@@ -75,7 +79,8 @@ $(document).ready(function(){
 						<div>
 							1
 							<textarea name="cbdoContent1" rows="5" cols="20">${bottom_content1.cbdContent }</textarea>
-							<input type="file" name="cbdoImage1">${bottom_content1.cbdImage }
+							<input type="file" name="cbdoImage1">
+							<img src="${conPath }/cookboard_img/${bottom_content1.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -84,7 +89,9 @@ $(document).ready(function(){
 						<div>
 							2
 							<textarea name="cbdoContent2" rows="5" cols="20">${bottom_content2.cbdContent }</textarea>
-							<input type="file" name="cbdoImage2">${bottom_content2.cbdImage }
+							<input type="file" name="cbdoImage2">
+							<img src="${conPath }/cookboard_img/${bottom_content2.cbdImage }" class="img_food">
+
 						</div>
 					</td>
 				</tr>
@@ -93,7 +100,8 @@ $(document).ready(function(){
 						<div>
 							3
 							<textarea name="cbdoContent3" rows="5" cols="20">${bottom_content3.cbdContent }</textarea>
-							<input type="file" name="cbdoImage3">${bottom_content3.cbdImage }
+							<input type="file" name="cbdoImage3">
+							<img src="${conPath }/cookboard_img/${bottom_content3.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -102,7 +110,8 @@ $(document).ready(function(){
 						<div>
 							4
 							<textarea name="cbdoContent4" rows="5" cols="20">${bottom_content4.cbdContent }</textarea>
-							<input type="file" name="cbdoImage4">${bottom_content4.cbdImage }
+							<input type="file" name="cbdoImage4">
+							<img src="${conPath }/cookboard_img/${bottom_content4.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -111,7 +120,8 @@ $(document).ready(function(){
 						<div>
 							5
 							<textarea name="cbdoContent5" rows="5" cols="20">${bottom_content5.cbdContent }</textarea>
-							<input type="file" name="cbdoImage5">${bottom_content5.cbdImage }
+							<input type="file" name="cbdoImage5">
+							<img src="${conPath }/cookboard_img/${bottom_content5.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -120,7 +130,8 @@ $(document).ready(function(){
 						<div>
 							6
 							<textarea name="cbdoContent6" rows="5" cols="20">${bottom_content6.cbdContent }</textarea>
-							<input type="file" name="cbdoImage6">${bottom_content6.cbdImage }
+							<input type="file" name="cbdoImage6">
+							<img src="${conPath }/cookboard_img/${bottom_content6.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -129,7 +140,8 @@ $(document).ready(function(){
 						<div>
 							7
 							<textarea name="cbdoContent7" rows="5" cols="20">${bottom_content7.cbdContent }</textarea>
-							<input type="file" name="cbdoImage7">${bottom_content7.cbdImage }
+							<input type="file" name="cbdoImage7">
+							<img src="${conPath }/cookboard_img/${bottom_content7.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -138,7 +150,8 @@ $(document).ready(function(){
 						<div>
 							8
 							<textarea name="cbdoContent8" rows="5" cols="20">${bottom_content8.cbdContent }</textarea>
-							<input type="file" name="cbdoImage8">${bottom_content8.cbdImage }
+							<input type="file" name="cbdoImage8">
+							<img src="${conPath }/cookboard_img/${bottom_content8.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -147,7 +160,8 @@ $(document).ready(function(){
 						<div>
 							9
 							<textarea name="cbdoContent9" rows="5" cols="20">${bottom_content9.cbdContent }</textarea>
-							<input type="file" name="cbdoImage9">${bottom_content9.cbdImage }
+							<input type="file" name="cbdoImage9">
+							<img src="${conPath }/cookboard_img/${bottom_content9.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -156,7 +170,8 @@ $(document).ready(function(){
 						<div>
 							10
 							<textarea name="cbdoContent10" rows="5" cols="20">${bottom_content10.cbdContent }</textarea>
-							<input type="file" name="cbdoImage10">${bottom_content10.cbdImage }
+							<input type="file" name="cbdoImage10">
+							<img src="${conPath }/cookboard_img/${bottom_content10.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -165,7 +180,8 @@ $(document).ready(function(){
 						<div>
 							11
 							<textarea name="cbdoContent11" rows="5" cols="20">${bottom_content11.cbdContent }</textarea>
-							<input type="file" name="cbdoImage11">${bottom_content11.cbdImage }
+							<input type="file" name="cbdoImage11">
+							<img src="${conPath }/cookboard_img/${bottom_content11.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -174,7 +190,8 @@ $(document).ready(function(){
 						<div>
 							12
 							<textarea name="cbdoContent12" rows="5" cols="20">${bottom_content12.cbdContent }</textarea>
-							<input type="file" name="cbdoImage12">${bottom_content12.cbdImage }
+							<input type="file" name="cbdoImage12">
+							<img src="${conPath }/cookboard_img/${bottom_content12.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -183,7 +200,8 @@ $(document).ready(function(){
 						<div>
 							13
 							<textarea name="cbdoContent13" rows="5" cols="20">${bottom_content13.cbdContent }</textarea>
-							<input type="file" name="cbdoImage13">${bottom_content13.cbdImage }
+							<input type="file" name="cbdoImage13">
+							<img src="${conPath }/cookboard_img/${bottom_content13.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -192,7 +210,8 @@ $(document).ready(function(){
 						<div>
 							14
 							<textarea name="cbdoContent14" rows="5" cols="20">${bottom_content14.cbdContent }</textarea>
-							<input type="file" name="cbdoImage14">${bottom_content14.cbdImage }
+							<input type="file" name="cbdoImage14">
+							<img src="${conPath }/cookboard_img/${bottom_content14.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>
@@ -201,7 +220,8 @@ $(document).ready(function(){
 						<div>
 							15
 							<textarea name="cbdoContent15" rows="5" cols="20">${bottom_content15.cbdContent }</textarea>
-							<input type="file" name="cbdoImage15">${bottom_content15.cbdImage }
+							<input type="file" name="cbdoImage15">
+							<img src="${conPath }/cookboard_img/${bottom_content15.cbdImage }" class="img_food">
 						</div>
 					</td>
 				</tr>

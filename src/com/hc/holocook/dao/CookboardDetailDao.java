@@ -145,4 +145,31 @@ public class CookboardDetailDao {
 		}
 		return result;
 	}
+	//CBNO, CBDORDER로 CBDIMAGE 불러오기
+	public String cbdGetImage(int cbNo, int cbdOrder){
+		String result = "fail";
+		Connection 		  conn 	= null;
+		PreparedStatement pstmt = null;
+		ResultSet 		  rs 	= null;
+		String 	sql = "SELECT CBDIMAGE FROM COOKBOARDDETAIL WHERE CBNO=? AND CBDORDER=?";
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt	(1, cbNo);
+			pstmt.setInt	(2, cbdOrder);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result    = rs.getString("cbdImage"  	);
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				if(rs	!=null) rs	 .close();
+				if(pstmt!=null) pstmt.close();
+				if(conn !=null) conn .close();
+			} catch (Exception e2) {}
+		}
+		return result;
+	}
 }

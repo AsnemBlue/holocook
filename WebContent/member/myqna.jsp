@@ -9,19 +9,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="${conPath}/css/style.css" rel="stylesheet">
-<style>
-td, th{border-bottom: 1px solid #ffa66d; height:30px; overflow: hidden;
-  	text-overflow: ellipsis;
-  	white-space: nowrap;}
-table tr td:nth-of-type(1) {width : 10%;}
-table tr td:nth-of-type(2) {
-	width : 60%;
-	text-align:left;
-}
-table tr td:nth-of-type(3) a{display: inline;}
-table tr td:nth-of-type(3) {width : 25%;}
-table tr td:nth-of-type(4) {width : 5%;}
-</style>
+<link href="${conPath }/css/member/myqna.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>

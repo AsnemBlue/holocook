@@ -10,23 +10,8 @@
 <title>Insert title here</title>
 <link href="${conPath }/css/style.css" rel="stylesheet">
 <link href="${conPath }/css/member/join_view.css" rel="stylesheet">
+<link href="${conPath }/css/member/myInfo.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<style >
-td,th{ height: 70px; line-height: 70px;}
-#div_img{
-	max-width: 400px;
-	max-height:400px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-#div_img img{
-	max-width: 400px;
-	height: auto;
-}
-
-#heartR{width:30px;    display: block; margin: 0 auto;}
-#heart_num{color:#e54343;}
-</style>
 </head>
 <body>
 	<header>

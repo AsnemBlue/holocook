@@ -50,6 +50,7 @@ import com.hc.holocook.service.member.MYQListService;
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private int writable = 0;	// 새로고침 등록 방지용 변수
     public FrontController() {}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		actionDo(request, response);
@@ -64,6 +65,8 @@ public class FrontController extends HttpServlet {
 		String  command  = uri.substring(conPath.length());
 		String  viewPage = null;
 		Service service  = null;
+		
+		
 		//메인화면 호출(레시피 리스트 포함)
 		if(command.equals("/goMain.do")) {
 			service = new CBListService();
@@ -86,12 +89,16 @@ public class FrontController extends HttpServlet {
 		////////////////////////////////////////
 		//회원가입 뷰 호출
 		else if(command.equals("/joinView.do")) {
+			writable = 1;
 			viewPage = "member/join_view.jsp";
 		}
 		//회원가입 실행
 		else if(command.equals("/join.do")) {
-			service = new MJoinService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new MJoinService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "loginView.do";
 		}
 		//id중복 체크
@@ -114,12 +121,16 @@ public class FrontController extends HttpServlet {
 		}
 		//개인정보수정뷰 호출
 		else if(command.equals("/modifyView.do")) {
+			writable = 1;
 			viewPage = "member/modify_view.jsp";
 		}
 		//개인정보 수정
 		else if(command.equals("/modify.do")) {
-			service = new MModifyService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new MModifyService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "modifyView.do";
 		}
 		//로그아웃기능
@@ -189,24 +200,32 @@ public class FrontController extends HttpServlet {
 		}
 		//레시피 작성 뷰 호출
 		else if(command.equals("/cbWriteView.do")) {
+			writable = 1;
 			viewPage = "cookboard/cbWrite_view.jsp";
 		}
 		//레시피 작성
 		else if(command.equals("/cbWrite.do")) {
-			service = new CBWriteService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new CBWriteService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "goMain.do";
 		}
 		//레시피 수정 뷰 호출
 		else if(command.equals("/cbModifyView.do")) {
 			service = new CBModifyViewService();
 			service.execute(request, response);
+			writable = 1;
 			viewPage = "cookboard/cbModify_view.jsp";
 		}
 		//레시피 수정
 		else if(command.equals("/cbModify.do")) {
-			service = new CBModifyService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new CBModifyService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "goMain.do";
 		}
 		//레시피 삭제
@@ -256,12 +275,16 @@ public class FrontController extends HttpServlet {
 		}
 		//공지사항 작성 뷰
 		if(command.equals("/nWriteView.do")) {
+			writable = 1;
 			viewPage = "admin/nWrite_view.jsp";
 		}
 		//공지사항 작성
 		else if(command.equals("/nWrite.do")) {
-			service = new NWriteService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new NWriteService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "notice.do";
 		}
 		//공지사항 상세보기
@@ -274,12 +297,16 @@ public class FrontController extends HttpServlet {
 		else if(command.equals("/nModifyView.do")) {
 			service = new NModifyViewService();
 			service.execute(request, response);
+			writable = 1;
 			viewPage = "admin/nModify_view.jsp";
 		}
 		//공지사항 수정
 		else if(command.equals("/nModify.do")) {
-			service = new NModifyService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new NModifyService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "noticeDetail.do";
 		}
 		//공지사항 삭제
@@ -305,24 +332,32 @@ public class FrontController extends HttpServlet {
 		}
 		//qna 작성 뷰
 		else if(command.equals("/qWriteView.do")) {
+			writable = 1;
 			viewPage = "admin/qWrite_view.jsp";
 		}
 		//qna 작성
 		else if(command.equals("/qWrite.do")) {
-			service = new QWriteService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new QWriteService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "qna.do";
 		}
 		//qna 수정 뷰
 		else if(command.equals("/qModifyView.do")) {
 			service = new QModifyViewService();
 			service.execute(request, response);
+			writable = 1;
 			viewPage = "admin/qModify_view.jsp";
 		}
 		//qna 수정
 		else if(command.equals("/qModify.do")) {
-			service = new QModifyService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new QModifyService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "qnaDetail.do";
 		}
 		//qna 삭제
@@ -333,12 +368,16 @@ public class FrontController extends HttpServlet {
 		}
 		//qna 답변글 뷰
 		else if(command.equals("/qReplyView.do")) {
+			writable = 1;
 			viewPage = "admin/qReply_view.jsp";
 		}
 		//qna 답변
 		else if(command.equals("/qReply.do")) {
-			service = new QReplyService();
-			service.execute(request, response);
+			if(writable==1) {
+				service = new QReplyService();
+				service.execute(request, response);
+				writable = 0;
+			}
 			viewPage = "qna.do";
 		}
 		//내가 작성한 qna list보기

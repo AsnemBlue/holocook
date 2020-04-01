@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Enumeration;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +34,8 @@ public class CBModifyService implements Service {
 			MultipartRequest mRequest = new MultipartRequest(request, path, maxSize, "utf-8", new DefaultFileRenamePolicy());
 			Enumeration<String> paramNames = mRequest.getFileNames();
 			cbImage = mRequest.getFilesystemName("cbImage");
-			cbImage = cbImage!=null? cbImage:"defualt.png";
+			String origin_cbImage 		= mRequest.getParameter("origin_cbImage");
+			cbImage = cbImage!=null? cbImage: origin_cbImage;	//대표 이미지 수정등록 안할시 원래 대표 이미지.
 			//cbWrite 용 파라미터값 다 받아오기->db에 넣기
 			cbdCount 			= Integer.parseInt(mRequest.getParameter("cbdCount"));
 			int    cbNo 		= Integer.parseInt(mRequest.getParameter("cbNo"	));
@@ -53,10 +55,12 @@ public class CBModifyService implements Service {
 			}
 			//요리과정 + 이미지 받아오기.
 			CookboardDetailDao cbdDao = CookboardDetailDao.getInstance();
+			ArrayList<CookboardDetailDto> cbdDtos = cbdDao.cbdGetDtos(cbNo);
 			for(int i=1;i<=12 ;i++) {
 				String cbdContent = mRequest.getParameter("cbdoContent"+i);
 				String cbdImage   = mRequest.getFilesystemName("cbdoImage"+i);
-				cbdImage = cbdImage!=null? cbdImage:"defualt.png";
+				String lastImage  = cbdDao.cbdGetImage(cbNo, i);
+				cbdImage = cbdImage!=null? cbdImage:lastImage;
 				int cbdOrder = i;
 				int cbdresult = cbdDao.cbdModify(cbdOrder, cbdImage, cbdContent, cbNo);
 				if(cbdresult==cbdDao.SUCCESS) {

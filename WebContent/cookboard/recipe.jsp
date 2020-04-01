@@ -165,6 +165,9 @@ max-width: 300px;
 				<a href="${conPath }/cbModifyView.do?cbNo=${top_content.cbNo}&cbdCount=${cbdCount}" class="btn_normal">수정 </a>
 				<a href="${conPath }/cbDelete.do?cbNo=${top_content.cbNo}" class="btn_normal">삭제 </a>
 		</c:if>
+		<c:if test="${not empty admin}">
+				<a href="${conPath }/cbDelete.do?cbNo=${top_content.cbNo}" class="btn_normal">삭제 </a>
+		</c:if>
 		<div id="reply_wrap">
 		<div id="reply">
 		<c:if test="${not empty member and empty admin}">

@@ -27,3 +27,9 @@ padding: 10px 35px 10px 15px;
 border: solid 1px #dadada;
 background: #fff;	
 }
+.error{
+	font-size: 14px;
+    line-height: 14px;
+    color: red;
+    text-align: left;
+}

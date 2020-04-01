@@ -10,37 +10,8 @@
 <title>Insert title here</title>
 <link href="${conPath }/css/style.css" rel="stylesheet">
 <link href="${conPath }/css/member/join_view.css" rel="stylesheet">
+<link href="${conPath }/css/member/modify_view.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<style>
-td,th{ height: 70px; line-height: 70px;}
-#div_img{
-	max-width: 400px;
-	max-height:400px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-#div_img img{
-	max-width: 400px;
-	height: auto;
-}
-.btn_modify{
-width: 130px;
-box-sizing: border-box;
-overflow: visible;
-text-transform: none;
--webkit-appearance: button;
-cursor: pointer;
-color: #fff;
-background-color: #f37321;
-border: 1px solid #e05d09;
-padding: 10px 30px;
-font-size: 18px;
-line-height: 1.3333333;
-border-radius: 3px;
-margin: 0 4px;
-margin-top: 20px;
-}
-</style>
 </head>
 <body>
 	<header>

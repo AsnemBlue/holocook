@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#content_wrap #rank_head {
+	font-size: 40px;
+    color: #f37321;
+}
+#content_wrap #rank_head img{width:100px;}
+#content_wrap .rank_list .rank_rankNum{
+	font-size:40px;
+	width:60px;
+}
+#content_wrap .rank_list{
+	align-items: center;
+	display: flex;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #ffd1b3;
+}
+#content_wrap .rank_list .rank_left{
+	height: 70px;
+    width: 70px;
+    overflow: hidden;
+    border-radius: 70px;
+}
+#content_wrap .rank_list .rank_left img{
+	display: inline-block;
+	width: 70px;
+}
+#content_wrap .rank_list .rank_center{
+	width: 200px;
+}
+#content_wrap .rank_list .rank_center:hover a{
+	cursor: pointer;
+	font-weight:500;
+	color:#f37321;
+}
+#content_wrap .rank_list .rank_right{
+	width:60px;
+}
+#content_wrap .rank_list .rank_right img{
+	width: 24px;
+    vertical-align: sub;
+}
+#content_wrap .rank_list .rank_space{
+	width:200px;
+}

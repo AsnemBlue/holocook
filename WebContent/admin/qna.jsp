@@ -75,7 +75,7 @@ table tr td:nth-of-type(5) {width:50px;}
 			</c:if>
 			<c:forEach var="i" begin="${startPage }" end="${endPage }">
 				<c:if test="${i eq pageNum }" >
-				 <span class="btn_page"> ${i }</span> 
+				 <span class="btn_page_now"> ${i }</span> 
 				</c:if>
 				<c:if test="${i != pageNum }">
 					 <a href="${conPath }/qna.do?pageNum=${i }" class="btn_page"> ${i }</a> 

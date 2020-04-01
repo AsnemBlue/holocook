@@ -17,6 +17,7 @@ caption {font-size: 18px; padding:10px;}
 table {width:90%; background-color: white;}
 table tr { height:40px; }
 td,  th {text-align: center; padding:5px; }
+hr{width: 100%;}
 /* */
 .left{text-align: left;}
 .paging {text-align: center;}

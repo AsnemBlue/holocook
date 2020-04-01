@@ -12,7 +12,6 @@ public class MIdChkService implements Service {
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		String mId = request.getParameter("mId");
 		MemberDao mDao = MemberDao.getInstance();
-		
 		if(mDao.mIdChk(mId)==MemberDao.NONEXISTENT) {
 			request.setAttribute("idChkMsg","사용가능한 ID입니다." );
 		}else {

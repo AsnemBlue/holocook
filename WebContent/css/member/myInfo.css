@@ -1,0 +1,15 @@
+@charset "UTF-8";
+td,th{ height: 70px; line-height: 70px;}
+#div_img{
+	max-width: 400px;
+	max-height:400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#div_img img{
+	max-width: 400px;
+	height: auto;
+}
+
+#heartR{width:30px;    display: block; margin: 0 auto;}
+#heart_num{color:#e54343;}

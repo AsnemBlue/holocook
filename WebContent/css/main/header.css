@@ -1,9 +1,11 @@
 @charset "UTF-8";
-/*
-header .lnb ul li .subMenu {display:none;}
-header .lnb ul li:hover .subMenu {display: block; margin: 10px 0 0 0;}
-*/
-
+li{
+    background-color: white;
+}
+header{
+	position: relative;
+    z-index: 100;
+}
 header #searchlogin{
 	
     height: 50px; 
@@ -12,9 +14,14 @@ header #searchlogin{
     background-color: #f37321;
     width:100%;
 }
+
 header #searchlogin #searchWrap, header nav{
 	width:1000px; margin:0 auto;
 	position:relative;
+}
+#searchWrap #login_button_wrap{
+	overflow:hidden;
+	height: 50px;
 }
 header #searchlogin #searchWrap #search{
 	width:310px;
@@ -31,6 +38,7 @@ header #searchlogin #searchWrap #search .text_search{
 	font-size: 1.1em;
 	padding: 0 30px 0 20px;
 }
+
 header #searchlogin #searchWrap #search .btn_search{
 	position:absolute;
 	right:15px; top:20px;
@@ -40,7 +48,7 @@ header #searchlogin #searchWrap #search .btn_search{
 }
 header #searchlogin #searchWrap #search .btn_search:hover{cursor: pointer;}
 /*로그아웃시 로그인 버튼 스타일 */
-#btn_login_view {
+header #searchlogin #searchWrap #loginwrap #btn_login_view {
 	float:right;
 	width: 53px;
     height: 23px;
@@ -50,14 +58,28 @@ header #searchlogin #searchWrap #search .btn_search:hover{cursor: pointer;}
     border:1px solid #d65412;
     border-radius: 5px;
 }
-#btn_login_view a{
+header #searchlogin #searchWrap #loginwrap #btn_login_view a{
 	color:white;
 }
 
-#searchWrap #login_button_wrap{
-	overflow:hidden;
-	height: 50px;
+header #searchlogin #searchWrap #loginwrap #btn_writeRecipe{
+	height: 30px;
+    position: relative;
+    top: 10px;
+    left: 300px;
 }
+header #searchlogin #searchWrap #loginwrap #btn_admin{    
+	border-bottom: 1px solid white;
+    height: 30px;
+    position: relative;
+    top: 5px;
+}
+header #searchlogin #searchWrap #loginwrap #toggle_admin{
+    position: relative;
+    top: 50px
+}
+
+
 header #searchlogin #searchWrap button{
 	float:right;
 	margin: 0 20px;
@@ -113,5 +135,17 @@ header nav #lineMenu li:hover > a, header nav .lineMenu_list li:hover > a, .togg
 	color:#f37321;
 	box-sizing: border-box;
 	border-bottom: 1px solid #f37321;
+}
+header nav #lineMenu .lineMenu_list{
+    border-bottom: 3px solid rgb(243, 115, 33);
+}
+#customer_center_list, #cook_center_list{
+	position: absolute;
+    top: 35px;
+    left: 0px;
+    z-index: 999;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    display: none;
 }
 

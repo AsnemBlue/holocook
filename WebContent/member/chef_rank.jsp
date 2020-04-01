@@ -6,60 +6,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="${conPath }/css/style.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<style>
-#reply_wrap{
-	position: relative;
-    width: 900px;
-}
-#rank_head {
-	font-size: 40px;
-    color: #f37321;
-}
-#rank_head img{width:100px;}
-.rank_rankNum{
-	font-size:40px;
-	width:60px;
-}
-.rank_list{
-	align-items: center;
-	display: flex;
-    margin: 10px 0;
-    padding: 10px 0;
-    border-top: 1px solid #ffd1b3;
-}
-.rank_left{
-	height: 70px;
-    width: 70px;
-    overflow: hidden;
-    border-radius: 70px;
-}
-.rank_left img{
-	display: inline-block;
-	width: 70px;
-}
-.rank_center{
-	width: 200px;
-}
-.rank_center:hover a{
-	cursor: pointer;
-	font-weight:500;
-	color:#f37321;
-}
-.rank_right{
-	width:60px;
-}
-.rank_right img{
-	width: 24px;
-    vertical-align: sub;
-}
-.rank_space{
-	width:200px;
-}
-</style>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="${conPath }/css/style.css" rel="stylesheet">
+	<link href="${conPath }/css/member/chef_rank.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 	<jsp:include page="../main/header.jsp"/>
@@ -82,10 +33,11 @@
 					<img src="${conPath }/member_img/${dto.mPhoto}">
 				</div>
 				<div class="rank_center">
-					<a href="${conPath }/"><p>${dto.mNick } </p></a>
+					<a href="${conPath }/"><p>${dto.mNick }</p></a>
 				</div>
 				<div class="rank_right">
-					<p><img src="${conPath }/img/heartR.png">${dto.mLike }</p>
+					<p>
+						<img src="${conPath }/img/heartR.png">${dto.mLike }</p>
 				</div>
 				<div class="rank_space"></div>
 			</div>
@@ -93,18 +45,18 @@
 	</div>
 	<div class="paging">
 		<c:if test="${startPage > BLOCKSIZE}">
-			<a href="${conPath }/chef_rank.do?pageNum=${startPage-1 }">이전</a>
+			<a href="${conPath }/chef_rank.do?pageNum=${startPage-1 }" class="btn_arrow">이전</a>
 		</c:if>
 		<c:forEach var="i" begin="${startPage }" end="${endPage }">
 			<c:if test="${i == pageNum }">
 				[ <b> ${i }</b> ]
 				</c:if>
 			<c:if test="${i != pageNum }">
-					[ <a href="${conPath }/chef_rank.do?pageNum=${i }"> ${i }</a> ]
+					[ <a href="${conPath }/chef_rank.do?pageNum=${i }" class="btn_page"> ${i }</a> ]
 				</c:if>
 		</c:forEach>
 		<c:if test="${endPage < pageCnt}">
-			<a href="${conPath }/chef_rank.do?pageNum=${endPage+1 }">다음</a>
+			<a href="${conPath }/chef_rank.do?pageNum=${endPage+1 }" class="btn_arrow">다음</a>
 		</c:if>
 	</div>
 	<jsp:include page="../main/footer.jsp"/>
